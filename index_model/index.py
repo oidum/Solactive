@@ -19,9 +19,8 @@ class IndexModel:
 
     def calc_index_level(self, start_date: dt.date, end_date: dt.date) -> None:
 
-        #use previous date for rebalancing instead of current date
+
         dt_str = self.data[self.date_index.index(start_date.strftime('%d/%m/%Y'))][0]
-#        curr_date = dt.datetime.strptime(dt_str, '%d/%m/%Y')
         curr_date = start_date
         curr_date_str = curr_date.strftime('%d/%m/%Y')
         end_date_str = end_date.strftime('%d/%m/%Y')
