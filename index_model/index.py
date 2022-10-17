@@ -38,7 +38,7 @@ class IndexModel:
                 index_level = index_info[0]
                 index_stocks = index_info[1]
 
-            index_level = 0.5 * float(self.data[i][index_stocks[0]])  0.25 * float(self.data[i][index_stocks[1]]) + 0.25 * float(self.data[i][index_stocks[2]])
+            index_level = 0.5 * float(self.data[i][index_stocks[0]]) + 0.25 * float(self.data[i][index_stocks[1]]) + 0.25 * float(self.data[i][index_stocks[2]])
             if curr_date == start_date:
                 self.index_output.append((self.data[i][0], 100))
             else:
